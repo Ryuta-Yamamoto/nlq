@@ -124,5 +124,4 @@ class SQlite:
 
     def execute(self, query, *args, **kwargs) -> sqlite3.Cursor:
         cursor = self.get_cursor()
-        query = self.build_query(query, *args, **kwargs)
         return cursor.execute(self.build_query(query, *args, **kwargs))
